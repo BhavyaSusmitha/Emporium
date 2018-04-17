@@ -44,7 +44,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="collapse-example">
 			<ul class="nav navbar-nav" id="links">
-				<li ><a href='<c:url value="/home"></c:url>'>Home</a></li>
+				<li ><a href='<c:url value="/"></c:url>'>Home</a></li>
 				<!-- value is for DispatcherServlet
 				DispatcherServlet using the value it has to find the handler method which can handle the request
 				http://localhost:8080/project1frontend/all/getproducts -> DispatcherServlet -> /all/getproducts
@@ -71,6 +71,8 @@
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=All"></c:url>'>All</a>
                     </li>
 			</ul>
+			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
+			
 			</li>
 			</ul>
 			</div>
