@@ -21,7 +21,8 @@
     		 form["shippingaddress.zipcode"].value=form["billingaddress.zipcode"].value;
     	 }
     	 
-    	 if(form.shippingsame.checked==false){
+    	 if(form.shippingsame.checked==false)
+    	 {
     		 form["shippingaddress.apartmentnumber"].value=""
     	     form["shippingaddress.streetname"].value=""
     		form["shippingaddress.city"].value=""
@@ -50,7 +51,7 @@
 <body>
 <div class="container">
 <c:url var="url" value="/all/registercustomer"></c:url>
-<form:form modelAttribute="customer" action="${url }">
+<form:form modelAttribute="customer" action="${url}">
 <p align="center"><b>Customer Details</b></p>
 <form:label path="id"></form:label>
 <form:hidden path="id"/>
