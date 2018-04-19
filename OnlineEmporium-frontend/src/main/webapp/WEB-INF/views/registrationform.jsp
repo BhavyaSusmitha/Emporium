@@ -7,6 +7,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href='<c:url value="/resources/css/registration.css"></c:url>'>
+<script type="text/javascript" 
+ src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+     
+     <script type="text/javascript">
+     function fillShippingAddress(form){
+    	 if(form.shippingsame.checked==true){
+    		 form["shippingaddress.apartmentnumber"].value=form["billingaddress.apartmentnumber"].value;
+    		 form["shippingaddress.streetname"].value=form["billingaddress.streetname"].value;
+    		 form["shippingaddress.city"].value=form["billingaddress.city"].value;
+    		 form["shippingaddress.state"].value=form["billingaddress.state"].value;
+    		 form["shippingaddress.country"].value=form["billingaddress.country"].value;
+    		 form["shippingaddress.zipcode"].value=form["billingaddress.zipcode"].value;
+    	 }
+    	 
+    	 if(form.shippingsame.checked==false){
+    		 form["shippingaddress.apartmentnumber"].value=""
+    	     form["shippingaddress.streetname"].value=""
+    		form["shippingaddress.city"].value=""
+    			form["shippingaddress.state"].value=""
+    			form["shippingaddress.country"].value=""
+    				form["shippingaddress.zipcode"].value=""
+    	 }
+     } 
+     $(document).ready(function(){
+    	 $('#form').validate({
+    		 rules:{
+    			 firstname:{required:true},
+    			 phonenumber:{required:true,number:true,minlength:10,maxlength:10},
+    			 "user.email":{required:true,email:true},
+    		 },
+    		 message:{
+    			 firstname:{required:"Firstname is mandatory"},
+   		 phonenumber:{required:"phonenumber is required"},
+   		 "user.email":{required:"Email is required",email:"Enter valid email address"}
+    		 }
+    	 })
+     })
+     
+     </script> 
 </head>
 <body>
 <div class="container">
@@ -34,7 +73,7 @@
 <form:input path="user.email"/>
 
 <form:label path="user.password">Enter password</form:label>
-<form:input path="user.password"/>
+<form:input path="user.password" type="password"/>
 <hr>
 <p align="center"><b>Billing Address</b><br></p>
 <form:label path="billingaddress.apartmentnumber">Enter Apartmentnumber</form:label>
@@ -57,7 +96,9 @@
 
 <hr>
 <p align="center"><b>Shipping Address</b></p>	
-
+<lable>
+Check this if billing address and shipping are same</lable>
+<input type="checkbox" onclick="fillShippingAddress(this.form)" id="shippingsame">
 <form:label path="shippingaddress.apartmentnumber">Enter Apartmentnumber</form:label>
 <form:input path="shippingaddress.apartmentnumber"/>
 
@@ -87,4 +128,3 @@
 </div>
 </body>
 </html>
-
