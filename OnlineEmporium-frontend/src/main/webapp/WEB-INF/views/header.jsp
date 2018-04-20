@@ -10,8 +10,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost:8081/OnlineEmporium-frontend/resources/css/table.css">
-<link rel="stylesheet" href="http://localhost:8081/OnlineEmporium-frontend/resources/css/navbar.css">
+<link rel="stylesheet" href="http://localhost:8002/OnlineEmporium-frontend/resources/css/table.css">
+<link rel="stylesheet" href="http://localhost:8002/OnlineEmporium-frontend/resources/css/navbar.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
@@ -71,9 +71,8 @@
 					   <a href='<c:url value="/all/searchbycategory?searchCondition=All"></c:url>'>All</a>
                     </li>
 			</ul>
-			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
-			
 			</li>
+			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			</ul>
 			</div>
 		</div>
