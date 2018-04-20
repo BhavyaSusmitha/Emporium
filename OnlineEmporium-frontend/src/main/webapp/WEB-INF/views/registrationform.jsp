@@ -34,7 +34,7 @@
 <form:input path="user.email"/>
 
 <form:label path="user.password">Enter password</form:label>
-<form:input path="user.password"/>
+<form:input path="user.password" type="password"/>
 <hr>
 <p align="center"><b>Billing Address</b><br></p>
 <form:label path="billingaddress.apartmentnumber">Enter Apartmentnumber</form:label>

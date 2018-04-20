@@ -13,6 +13,7 @@
        <mvc:annotation-driven></mvc:annotation-driven>
        
        <!-- @Componentscan -->
+ 
        <context:component-scan base-package="com.niit"></context:component-scan>
        
        <!-- to convert logical view name to actual view name -->

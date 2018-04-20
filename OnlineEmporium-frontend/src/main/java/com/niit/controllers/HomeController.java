@@ -1,7 +1,9 @@
 package com.niit.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -15,15 +17,19 @@ public HomeController(){
 // /WEB-INF/views/home.jsp
 @RequestMapping("/")
 public ModelAndView getHomePage()
-{
-	
-	
-	
+{	
 	ModelAndView mv=new ModelAndView("home");
 	
 	return mv;
-	
-	
-
 }
+@RequestMapping("/login")
+public String loginPage(@RequestParam(required=false) String error,@RequestParam(required=false) String logout,Model model){
+	if(error!=null)
+	model.addAttribute("error","Invalid Username/Password");
+	if(logout!=null)
+		model.addAttribute("msg","Loggedout successfully");
+	return "login";
+}
+
+
 }

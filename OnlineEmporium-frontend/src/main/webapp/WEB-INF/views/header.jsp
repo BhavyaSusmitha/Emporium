@@ -3,6 +3,9 @@
      <%@page isELIgnored="false" %>
      <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
      <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+      <%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+
+     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -54,7 +57,9 @@
 				/WEB-INF/views/productlist.jsp
 				 -->
 				<li><a href='<c:url value="/all/getproducts"></c:url>'>Browse All Products</a></li>
+				 <security:authorize access="hasRole('ROLE_ADMIN')">
 				<li><a href='<c:url value="/admin/getproductform"></c:url>'>Add Product</a></li>
+				</security:authorize>
 				<li class="dropdown">
 			<a href="" class="dropdown-toggle" data-toggle="dropdown">
                      Select by Category<b class="caret"></b></a>
@@ -72,7 +77,15 @@
                     </li>
 			</ul>
 			</li>
+			<c:if test="${pageContext.request.userPrincipal.name==null }">
 			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
+			<li><a href='<c:url value="/login"></c:url>'>Sign In</a></li>
+			</c:if>
+			
+			<c:if test="${pageContext.request.userPrincipal.name!=null }">
+			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>logout</a></li>
+			</c:if>
+			</ul> 
 			</ul>
 			</div>
 		</div>
