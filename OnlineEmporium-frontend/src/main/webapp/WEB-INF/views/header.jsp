@@ -13,8 +13,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost:8002/OnlineEmporium-frontend/resources/css/table.css">
-<link rel="stylesheet" href="http://localhost:8002/OnlineEmporium-frontend/resources/css/navbar.css">
+<link rel="stylesheet" href="http://localhost:8022/OnlineEmporium-frontend/resources/css/table.css">
+<link rel="stylesheet" href="http://localhost:8022/OnlineEmporium-frontend/resources/css/navbar.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
@@ -80,6 +80,9 @@
 			<c:if test="${pageContext.request.userPrincipal.name==null }">
 			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			<li><a href='<c:url value="/login"></c:url>'>Sign In</a></li>
+			</c:if>
+			<c:if test="${pageContext.request.userPrincipal.name!=null }">
+			<li><a href="<c:url value='/cart/purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${sessionScope.cartSize })</a></li>
 			</c:if>
 			
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">

@@ -9,6 +9,7 @@ import com.niit.model.Cart;
 import com.niit.model.CartItem;
 import com.niit.model.Category;
 import com.niit.model.Customer;
+import com.niit.model.CustomerOrder;
 import com.niit.model.Product;
 import com.niit.model.ShippingAddress;
 import com.niit.model.User;
@@ -28,17 +29,15 @@ import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 public class DBConfiguration {
 //to create beans
 	
-	
-	
-	
 	@Bean(name="dataSource")
 	public DataSource getDataSource() {
+		System.out.println("Entering DataSource Bean creation method ");
 	    BasicDataSource dataSource = new BasicDataSource();
 	    dataSource.setDriverClassName("org.h2.Driver");
 	    dataSource.setUrl("jdbc:h2:tcp://localhost/~/susmitha");
-	    
 	    dataSource.setUsername("sa");
 	    dataSource.setPassword("");
+	    System.out.println("DataSource bean " +dataSource);
 	    return dataSource;
 	}
 	/*
@@ -47,6 +46,7 @@ public class DBConfiguration {
 	 */
 	@Bean //SessionFactory - factory of session objects
 	public SessionFactory sessionFactory() {
+		System.out.println("Entering sessionFactory creation method");
 		LocalSessionFactoryBuilder lsf=
 				new LocalSessionFactoryBuilder(getDataSource());
 		Properties hibernateProperties=new Properties();
@@ -57,8 +57,9 @@ public class DBConfiguration {
 		lsf.addProperties(hibernateProperties);
 		//An array of Class objects of all the entities
 		//Map all entities to relational table
-		Class classes[]=new Class[]{Product.class,Category.class,Authorities.class,BillingAddress.class,Cart.class,Customer.class,ShippingAddress.class,User.class,CartItem.class};
+		Class classes[]=new Class[]{Product.class,Category.class,User.class,Authorities.class,Customer.class,CartItem.class,Cart.class,ShippingAddress.class,BillingAddress.class,CustomerOrder.class};
 		//localsesionfactorybuilder -> sessionfactory -> map all entities with relation table
+		System.out.println("SessionFactory bean " + lsf);
 	    return lsf.addAnnotatedClasses(classes).buildSessionFactory();
 	}
 	@Bean
@@ -66,3 +67,9 @@ public class DBConfiguration {
 		return new HibernateTransactionManager(sessionFactory());
 	}
 }
+
+
+
+
+
+
