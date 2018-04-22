@@ -1,9 +1,11 @@
 @CHARSET "ISO-8859-1";
 #thead{
-	background-color:#79B8B2
+	background-color:#00ced1;
+	font-family:Palatino;
+	font-size:20px;
 }
 #tbody{
-	background-color:#C3E0E0;
+	background-color:#34ccff;
 } 
 
 

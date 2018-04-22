@@ -43,7 +43,7 @@
 			url - http://localhost:8080/project1frontend/resources/images/niit.jpg
 			 -->
 				<a class="navbar-brand" href="">
-		<img src='<c:url value="/resources/images/digit.jpg"></c:url>' alt="NIIT" height="30px" width="120px"></a>
+		<img src='<c:url value="/resources/images/digit.jpg"></c:url>' alt="NIIT" height="35px" width="130px" align="center"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="collapse-example">
 			<ul class="nav navbar-nav" id="links">
@@ -81,12 +81,13 @@
 			<li><a href='<c:url value="/all/registrationform"></c:url>'>Sign Up</a></li>
 			<li><a href='<c:url value="/login"></c:url>'>Sign In</a></li>
 			</c:if>
+			<security:authorize access="hasRole('ROLE_USER')">
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
-			<li><a href="<c:url value='/cart/purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${sessionScope.cartSize })</a></li>
+			<li><a href="<c:url value='/cart/j_spring_security_purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${sessionScope.cartSize })</a></li>
 			</c:if>
-			
+			</security:authorize>
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
-			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>logout</a></li>
+			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>Logout</a></li>
 			</c:if>
 			</ul> 
 			</ul>

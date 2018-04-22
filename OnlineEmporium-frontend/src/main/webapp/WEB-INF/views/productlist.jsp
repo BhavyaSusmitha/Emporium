@@ -41,7 +41,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 					<th>Action</th>
 				</tr>
 			</thead>
-			<tbody id="tbody">
+			<tbody id="tbody" >
 				<c:forEach items="${productsAttr }" var="p">
 					<tr>
 					  <td><img src='<c:url value="/resources/images/${p.id }.png" ></c:url>' alt="Image NA" height="50px" width="50px"></td>

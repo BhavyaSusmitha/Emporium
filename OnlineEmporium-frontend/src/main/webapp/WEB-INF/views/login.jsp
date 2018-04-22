@@ -23,19 +23,9 @@
 </div>
 </c:if>
 	<form action="<c:url value='/j_spring_security_check'></c:url>" method="post">
-		<table>
-			<tr>
-				<td>Enter Username</td>
-				<td><input type="text" name="j_username"></td>
-			</tr>
-			<tr>
-				<td>Enter Password</td>
-				<td><input type="password" name="j_password"></td>
-			</tr>
-			<tr>
-			<td><input type="submit" value="submit"></td>
-			</tr>
-		</table>
+		<span class="labelClass">Enter Username: </span><input type="text" name="j_username"><br><br>
+  <span class="labelClass">Enter Password: </span><input type="password" name="j_password"><br>
+  <input type="submit" value="Submit">
 	</form>
 	</div>
 </body>
