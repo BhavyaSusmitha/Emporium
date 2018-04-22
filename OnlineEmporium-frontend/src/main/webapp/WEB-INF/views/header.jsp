@@ -83,8 +83,9 @@
 			</c:if>
 			<security:authorize access="hasRole('ROLE_USER')">
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
-			<li><a href="<c:url value='/cart/j_spring_security_purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${sessionScope.cartSize })</a></li>
+			<li><a href="<c:url value='/cart/j_spring_security_  purchasedetails'></c:url>"><span class="glyphicon glyphicon-shopping-cart"></span>(${sessionScope.cartSize })</a></li>
 			</c:if>
+			<li><a href="">Welcome ${pageContext.request.userPrincipal.name}</li></a>
 			</security:authorize>
 			<c:if test="${pageContext.request.userPrincipal.name!=null }">
 			<li><a href='<c:url value="/j_spring_security_logout"></c:url>'>Logout</a></li>
