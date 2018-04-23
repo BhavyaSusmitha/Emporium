@@ -104,14 +104,25 @@ private ProductService productService;
 		Customer customer=user.getCustomer();
 		customer.setShippingaddress(shippingaddress);//updated shippingaddress if it is updated.
 		user.setCustomer(customer);
-		
-		CustomerOrder customerOrder=cartItemService.createOrder(user);
 		List<CartItem> cartItems=user.getCartItems();
-		for(CartItem cartItem:cartItems)
+		for(CartItem cartItem:cartItems){
+			Product product=cartItem.getProduct();
+			if((product.getQuantity()-cartItem.getQuantity())<0){
+				cartItemService.removeCartItem(cartItem.getCartitemid());
+			model.addAttribute("productNA",product);
+			return "productNotAvailable";
+		}
+	}
+		CustomerOrder customerOrder=cartItemService.createOrder(user);
+		 cartItems=user.getCartItems();
+		for(CartItem cartItem:cartItems){
+			Product product=cartItem.getProduct();
+		product.setQuantity(product.getQuantity()-cartItem.getQuantity());
+		productService.updateProduct(product);
 			cartItemService.removeCartItem(cartItem.getCartitemid());
+	}
 		model.addAttribute("order",customerOrder);
 		session.setAttribute("cartSize", 0);
 		return "orderdetails";
-	}
-	
+}
 }
