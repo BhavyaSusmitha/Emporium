@@ -31,6 +31,9 @@ private double price;
 @JoinColumn(name="cid")
 //FK category_id
 private Category category;
+
+
+
 @Transient //not persistent
 private MultipartFile image;
 public int getId() {
@@ -72,9 +75,11 @@ public void setCategory(Category category) {
 }
 
 
+
 public MultipartFile getImage() {
 	return image;
 }
+
 public void setImage(MultipartFile image) {
 	this.image = image;
 }

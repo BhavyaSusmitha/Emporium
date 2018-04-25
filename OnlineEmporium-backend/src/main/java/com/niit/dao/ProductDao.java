@@ -12,3 +12,5 @@ void deleteProduct(int id);
 void saveOrUpdateProduct(Product product);
 List<Category> getAllCategories();
 }
+
+
