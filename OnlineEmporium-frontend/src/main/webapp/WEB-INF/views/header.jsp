@@ -13,10 +13,8 @@
 <title>Insert title here</title>
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href='<c:url value="/resources/css/registration.css"></c:url>'>
-
-<link type="text/css" rel="stylesheet" href='<c:url value="/resources/css/navbar.css"></c:url>'>
-
+<link rel="stylesheet" href="http://localhost:8055/OnlineEmporium-frontend/resources/css/table.css">
+<link rel="stylesheet" href="http://localhost:8055/OnlineEmporium-frontend/resources/css/navbar.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script
