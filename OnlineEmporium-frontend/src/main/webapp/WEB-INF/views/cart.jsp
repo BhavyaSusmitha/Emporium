@@ -4,6 +4,11 @@
 <%@include file="header.jsp" %>
 <html>
 <head>
+<style>
+body {
+    background-color:#ccf2ff;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>

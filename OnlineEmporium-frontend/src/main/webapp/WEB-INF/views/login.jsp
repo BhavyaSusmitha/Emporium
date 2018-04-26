@@ -4,6 +4,11 @@
 <%@ include file="header.jsp"%>
 <html>
 <head>
+<style>
+body {
+    background-color:#ccf2ff;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link href='<c:url value="/resources/css/login.css"></c:url>' rel="stylesheet">
@@ -25,7 +30,7 @@
 	<form action="<c:url value='/j_spring_security_check'></c:url>" method="post">
 		<span class="labelClass">Enter Username: </span><input type="text" name="j_username"><br><br>
   <span class="labelClass">Enter Password: </span><input type="password" name="j_password"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit" align="middle">
 	</form>
 	</div>
 </body>

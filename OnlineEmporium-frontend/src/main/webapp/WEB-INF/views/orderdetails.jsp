@@ -3,7 +3,6 @@
 <%@ include file="header.jsp" %>
 <%@ page isELIgnored="false" %>
 <jsp:useBean id="now" class="java.util.Date" />
-
 <div class="container-wrapper">
     <div class="container">
     

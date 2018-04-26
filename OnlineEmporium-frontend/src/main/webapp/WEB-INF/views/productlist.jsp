@@ -19,9 +19,14 @@
 	});
 </script>
 <title>Insert title here</title>
+<style>
+body {
+    background-color:#ccf2ff;
+}
+</style>
+</head>
 </head>
 <body>
-
 	<!-- for iteration - similar to for() in Java -->
 	<!-- productsAttr is a model attribute, to which we have assigned List<Product> -->
 	<!-- 
@@ -32,7 +37,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 	<div class="container">
 		<b>List of Products</b>
 		<table class="table table-hover" border="2">
-			<thead id="thead">
+			<thead id="thead" >
 				<tr>
 				    <th>Image</th>
 					<th>ProductName</th>
@@ -41,7 +46,7 @@ p = 1 1000.0 Product Description for toy car Toy Car 12
 					<th>Action</th>
 				</tr>
 			</thead>
-			<tbody id="tbody" >
+			<tbody id="#tbody" >
 				<c:forEach items="${productsAttr }" var="p">
 					<tr>
 					  <td><img src='<c:url value="/resources/images/${p.id }.png" ></c:url>' alt="Image NA" height="50px" width="50px"></td>
