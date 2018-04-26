@@ -7,12 +7,17 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd">
+       
+      
+    
+     http://www.springframework.org/schema/context/spring-context.xsd">
+      
        <!-- for auto-detecting the annotations @RequestMapping -->
        <!-- enable spring mvc -->
-       
-       
-       <mvc:annotation-driven>
+ 
+   
+         <mvc:annotation-driven>
+   
        <mvc:argument-resolvers>
          <bean class="org.springframework.security.web.bind.support.AuthenticationPrincipalArgumentResolver">
         
@@ -22,6 +27,7 @@
        
       
        <!-- @Componentscan -->
+       
        <context:component-scan base-package="com.niit"></context:component-scan>
        
        <!-- to convert logical view name to actual view name -->
