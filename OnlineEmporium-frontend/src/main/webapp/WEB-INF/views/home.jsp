@@ -12,14 +12,25 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
                 <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img class="first-slide home-image" src='<c:url value="/resources/images/gade.jpg"></c:url>' alt="first slide" height="100%" width="100%">
+                    <img class="first-slide home-image" src='<c:url value="/resources/images/ban.jpg"></c:url>' alt="first slide" height="100%" width="100%">
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1 style="color:white ">WELCOME TO THE Digital India Website</h1>
+                            <p style="color:white">Here You Can Browse And Buy Products.Order Now For Your Amazing New Arrivals</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="item ">
+                    <img class="second-slide home-image" src='<c:url value="/resources/images/gade.jpg"></c:url>' alt="second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 style="color:black ">WELCOME TO THE GADGET STORE</h1>
@@ -28,7 +39,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="second-slide home-image" src='<c:url value="/resources/images/phone1.jpg"></c:url>' alt="Second slide" height="100%" width="100%">
+                    <img class="third-slide home-image" src='<c:url value="/resources/images/phn.jpg"></c:url>' alt="Third slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1 style ="color:black ">The OnlineEmporium Store.</h1>
@@ -37,7 +48,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img class="third-slide home-image " src='<c:url value="/resources/images/com.png"></c:url>' alt="Third slide" height="100%" width="100%">
+                    <img class="fourth-slide home-image " src='<c:url value="/resources/images/com.png"></c:url>' alt="Fourth slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
                             <h1  style ="color:black ">The Gadget You Love</h1>

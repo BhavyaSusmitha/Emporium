@@ -105,14 +105,14 @@ private ProductService productService;
 		customer.setShippingaddress(shippingaddress);//updated shippingaddress if it is updated.
 		user.setCustomer(customer);
 		List<CartItem> cartItems=user.getCartItems();
-		for(CartItem cartItem:cartItems){
+		for(CartItem cartItem:user.getCartItems()){
 			Product product=cartItem.getProduct();
 			if((product.getQuantity()-cartItem.getQuantity())<0){
 				cartItemService.removeCartItem(cartItem.getCartitemid());
 			model.addAttribute("productNA",product);
 			return "productNotAvailable";
 		}
-	}
+		}
 		CustomerOrder customerOrder=cartItemService.createOrder(user);
 		 cartItems=user.getCartItems();
 		for(CartItem cartItem:cartItems){
