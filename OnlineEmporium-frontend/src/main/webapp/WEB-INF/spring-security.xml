@@ -7,7 +7,9 @@
         http://www.springframework.org/schema/security 
        http://www.springframework.org/schema/security/spring-security.xsd">
 
+
 <security:http auto-config="true">
+
 <security:csrf disabled="true"/>
 <!-- /admin/getproductform, /admin/saveproduct -->
 <security:intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')"/>

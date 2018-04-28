@@ -23,7 +23,7 @@
                     <img class="first-slide home-image" src='<c:url value="/resources/images/ban.jpg"></c:url>' alt="first slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 style="color:white ">WELCOME TO THE Digital India Website</h1>
+                            <h1 style="color:white ">WELCOME TO THE DIGITAL INDIA WEBSITE</h1>
                             <p style="color:white">Here You Can Browse And Buy Products.Order Now For Your Amazing New Arrivals</p>
                         </div>
                     </div>
@@ -33,8 +33,8 @@
                     <img class="second-slide home-image" src='<c:url value="/resources/images/gade.jpg"></c:url>' alt="second slide" height="100%" width="100%">
                     <div class="container">
                         <div class="carousel-caption">
-                            <h1 style="color:black ">WELCOME TO THE GADGET STORE</h1>
-                            <p style="color:black">Here You Can Browse And Buy Products.Order Now For Your Amazing New Arrivals</p>
+                            <h1 style="color:white "> THE GADGET STORE</h1>
+                            <p style="color:white">Value for money coupled with <br>Icredible Elegance </p>
                         </div>
                     </div>
                 </div>

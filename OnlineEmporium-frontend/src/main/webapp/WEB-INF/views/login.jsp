@@ -8,7 +8,19 @@
 body {
     background-color:#ccf2ff;
 }
+input[type=submit] {
+    background-color: #ff9933;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: center;
+}
+
+
 </style>
+</head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <link href='<c:url value="/resources/css/login.css"></c:url>' rel="stylesheet">
@@ -30,7 +42,7 @@ body {
 	<form action="<c:url value='/j_spring_security_check'></c:url>" method="post">
 		<span class="labelClass">Enter Username: </span><input type="text" name="j_username"><br><br>
   <span class="labelClass">Enter Password: </span><input type="password" name="j_password"><br>
-  <input type="submit" value="Submit" align="middle">
+  <input  type="submit" value="Submit" align="middle">
 	</form>
 	</div>
 </body>
